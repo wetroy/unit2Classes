@@ -9,8 +9,8 @@
 public class Car
 {
     /** fuel efficiency in mpg */
-    private int fuelEfficiency;
-    private int fuelTank;
+    private double fuelEfficiency;
+    private double fuelTank;
     
 
 
@@ -35,9 +35,11 @@ public class Car
      */
     public void drive(int miles)
     {
-        // put your code here
+        double gallonsBurned = miles / this.fuelEfficiency;
+        this.fuelTank = this.fuelTank - gallonsBurned;
     }
-
+
+
     /**
      * Adds the specified amount of gas in gallons to this car's tank
      *
@@ -47,9 +49,10 @@ public class Car
      */
     public void addGas(int gallons)
     {
-        // put your code here
+        this.fuelTank = this.fuelTank + gallons;
     }
-
+
+
     /**
      * Returns the number of gallons of gas remaining in this car's tank
      *
@@ -57,7 +60,7 @@ public class Car
      */
     public double getGasInTank()
     {
-        return 0;
+        return this.fuelTank;
     }
     
 }
