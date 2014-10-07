@@ -3,19 +3,24 @@ import java.awt.geom.Rectangle2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Building here.
+ * A building with a customizable color that can be put anywhere in the window
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Bill Troy 
+ * @version 10/7/14
  */
 public class Building
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** xLeft     the x point where the left side of the building starts to be drawn */
     private int xLeft;
+    /** the y point where the top of the building starts to be drawn */    
     private int yTop;
+    /** the color the building will be */
     private Color color;
     /**
-     * Default constructor for objects of class Building
+     * The constructor for objects of class Building
+     * @param x     the x point where the left side of the building starts to be drawn
+     * @param y     the y point where the top of the building starts to be drawn
+     * @param c     the color the building will be
      */
     public Building(int x, int y, Color c)
     {
@@ -25,15 +30,9 @@ public class Building
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * creates the building with its color, size, coordinates, and windows
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    g2    a graphics object that is imported 
      */
     public void draw(Graphics2D g2)
     {
